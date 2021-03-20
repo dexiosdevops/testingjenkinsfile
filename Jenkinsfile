@@ -1,11 +1,12 @@
 pipeline {
     agent any
+    triggers {
+        pollSCM('') //Empty quotes tells it to build on a push
+    }
     parameters {
         string(name: 'STATEMENT', defaultValue: 'Class', description: 'What should I say?')
     }
-    triggers {
-        githubPush()
-    }
+
     stages {
         stage('Build') { 
             steps {
