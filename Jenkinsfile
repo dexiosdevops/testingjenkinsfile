@@ -14,6 +14,7 @@ pipeline {
                 echo "Hello world"
                 echo "${STATEMENT}"
                 echo "nothing"
+                echo "adding new file"
             }
         }
     }
