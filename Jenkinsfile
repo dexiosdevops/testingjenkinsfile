@@ -3,6 +3,9 @@ pipeline {
     parameters {
         string(name: 'STATEMENT', defaultValue: 'Class', description: 'What should I say?')
     }
+    triggers {
+        githubPush()
+    }
     stages {
         stage('Build') { 
             steps {
